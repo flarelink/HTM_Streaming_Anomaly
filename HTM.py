@@ -23,7 +23,7 @@ from nupic.algorithms.backtracking_tm_cpp import BacktrackingTMCPP as TemporalMe
 def init_HTM(# SP inputs
              input_window, n_cols, pot_radius, pot_percent, inhibition, act_cols_area, stim_thresh, perm_dec_SP, perm_inc_SP, perm_thresh, boosting, random_seed,
              # TM inputs, only similarity is n_cols and random_seed
-             n_cells_per_col, init_perm, min_thresh, new_syn_learning, perm_inc_TM, perm_dec_TM, punish_syn, age, decay, act_thresh, pam_l, max_seg_per_cell, max_syn_per_seg
+             n_cells_per_col, init_perm, min_thresh, new_syn_learning, perm_inc_TM, perm_dec_TM, age, decay, act_thresh, pam_l, max_seg_per_cell, max_syn_per_seg
              ):
     """
     Instantiations for Spatial Pooler and Temporal Memory for HTM model
@@ -166,7 +166,3 @@ class HTM_Model(object):
         # Compute the predicted columns
         self.predCols = self.tm.topDownCompute()
                         
-
-print(SpatialPooler)
-
-print(TM)
