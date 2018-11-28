@@ -1,0 +1,8 @@
+# Ignore csv files since they are datasets
+*.csv
+
+# Ignore TEMP directory
+TEMP/
+
+# Ignore python byte code files
+*.pyc

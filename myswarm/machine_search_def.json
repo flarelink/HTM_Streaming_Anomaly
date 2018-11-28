@@ -1,0 +1,57 @@
+{
+  "includedFields": [
+    {
+      "fieldName": "timestamp", 
+      "fieldType": "datetime"
+    }, 
+    {
+      "fieldName": "value", 
+      "fieldType": "float"
+    }
+  ], 
+  "streamDef": {
+    "info": "test", 
+    "version": 1, 
+    "streams": [
+      {
+        "info": "machine_temperature_system_failure.csv", 
+        "source": "file://data/machine_temperature_system_failure.csv", 
+        "columns": [
+          "*"
+        ], 
+        "last_record": 100
+      }
+    ], 
+    "aggregation": {
+      "hours": 1, 
+      "microseconds": 0, 
+      "seconds": 0, 
+      "fields": [
+        [
+          "value", 
+          "sum"
+        ], 
+        [
+          "timestamp", 
+          "first"
+        ]
+      ], 
+      "weeks": 0, 
+      "months": 0, 
+      "minutes": 0, 
+      "days": 0, 
+      "milliseconds": 0, 
+      "years": 0
+    }
+  }, 
+  "inferenceType": "MultiStep", 
+  "inferenceArgs": {
+    "predictionSteps": [
+      1
+    ], 
+    "predictedField": "value"
+  }, 
+  "iterationCount": -1, 
+  "swarmSize": "medium"
+}
+
