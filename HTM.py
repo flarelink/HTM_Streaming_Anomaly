@@ -154,15 +154,3 @@ class HTM_Model(object):
         Reset the learning state.
         """
         self.tm.reset()
-
-    def process(self, window):
-        """
-        Run a new window through the HTM model.
-        """
-        # Run the focus window through the SP
-        self.sp.compute(window, self.learn, self.activeCols)
-        # Run TM algorithm (inference is always turned on)
-        self.tm.compute(self.activeCols, self.learn, True)
-        # Compute the predicted columns
-        self.predCols = self.tm.topDownCompute()
-                        
