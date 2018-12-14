@@ -6,3 +6,8 @@ TEMP/
 
 # Ignore python byte code files
 *.pyc
+
+# Ignore extra files
+HTM.py
+main_anomaly_detection.py
+reference.txt
